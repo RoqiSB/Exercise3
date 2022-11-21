@@ -30,5 +30,19 @@ namespace Exercise_Linked_List_D
             else
                     return (false);
         }
+        public bool listEmpty()
+        {
+            if (LAST == null)
+                return true;
+            else
+                return false;
+        }
+
+        public void traverse()/*Traverses all the nodes of the list*/
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+        }
     }
 }
