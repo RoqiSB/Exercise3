@@ -55,8 +55,8 @@ namespace Exercise_Linked_List_D
                     return;
                 }
             }
-            newNode.next = current;
-            newNode.prev = previous;
+            newNode.next = LAST.next;
+            LAST.next = newNode;
 
             if (current == null)
             {
@@ -64,8 +64,9 @@ namespace Exercise_Linked_List_D
                 previous.next = newNode;
                 return;
             }
-            current.prev = newNode;
-            previous.next = newNode;
+            newNode.next = LAST.next;
+            LAST.next = newNode;
+            LAST = newNode;
         }
         public bool Search(int rollNo, ref Node previous, ref Node current)
         /*Searches for the specified node*/
