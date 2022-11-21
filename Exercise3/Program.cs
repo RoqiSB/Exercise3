@@ -122,21 +122,27 @@ namespace Exercise_Linked_List_D
                 try
                 {
                     Console.WriteLine("\nMenu");
-                    Console.WriteLine("1. View all the records in the list");
-                    Console.WriteLine("2. Search for a record in the list");
-                    Console.WriteLine("3. Display the forst record int the list");
-                    Console.WriteLine("4. Exit");
+                    Console.WriteLine("1. Add a record to the list");
+                    Console.WriteLine("2. View all the records in the list");
+                    Console.WriteLine("3. Search for a record in the list");
+                    Console.WriteLine("4. Display the forst record int the list");
+                    Console.WriteLine("5. Exit");
                     Console.WriteLine("\nEnter your choice (1-4) ");
                     char ch = Convert.ToChar(Console.ReadLine());
                     switch (ch)
                     {
-                        
                         case '1':
+                            {
+                                obj.addNode();
+                            }
+                            break;
+
+                        case '2':
                             {
                                 obj.traverse();
                             }
                             break;
-                        case '2':
+                        case '3':
                             {
                                 if (obj.listEmpty() == true)
                                 {
@@ -157,12 +163,12 @@ namespace Exercise_Linked_List_D
                                 }
                             }
                             break;
-                        case '3':
+                        case '4':
                             {
                                 obj.firstNode();
                             }
                             break;
-                        case '4':
+                        case '5':
                             return;
                         default:
                             {
