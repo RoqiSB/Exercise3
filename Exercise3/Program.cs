@@ -20,19 +20,19 @@ namespace Exercise_Linked_List_D
         }
         public void addNode()
         {
-            int nim;
+            int rollNo;
             string nm;
             Console.Write("\nEnter the roll Number of the student: ");
-            nim = Convert.ToInt32(Console.ReadLine());
+            rollNo = Convert.ToInt32(Console.ReadLine());
             Console.Write("\nEnter the name of the student :");
             nm = Console.ReadLine();
             Node newNode = new Node();
-            newNode.rollNumber = nim;
+            newNode.rollNumber = rollNo;
             newNode.name = nm;
 
-            if (LAST == null || nim <= LAST.rollNumber)
+            if (LAST == null || rollNo <= LAST.rollNumber)
             {
-                if ((LAST != null) && (nim == LAST.rollNumber))
+                if ((LAST != null) && (rollNo == LAST.rollNumber))
                 {
                     Console.WriteLine("\nDuplicate number not allowed ");
                     return;
@@ -46,10 +46,10 @@ namespace Exercise_Linked_List_D
             }
             Node previous, current;
             for (current = previous = LAST;
-                current != null && nim >= current.rollNumber;
+                current != null && rollNo >= current.rollNumber;
                 previous = current, current = current.next)
             {
-                if (nim == current.rollNumber)
+                if (rollNo == current.rollNumber)
                 {
                     Console.WriteLine("\nDuplicate roll numbers not allowed");
                     return;
@@ -76,7 +76,7 @@ namespace Exercise_Linked_List_D
                 if (rollNo == current.rollNumber)
                     return (true);/*return false if the node is not found*/
             }
-            if (rollNo != LAST.rollNumber)
+            if (rollNo == LAST.rollNumber)
                 return true;
             else
                     return (false);
@@ -126,7 +126,7 @@ namespace Exercise_Linked_List_D
                     Console.WriteLine("1. Add a record to the list");
                     Console.WriteLine("2. View all the records in the list");
                     Console.WriteLine("3. Search for a record in the list");
-                    Console.WriteLine("4. Display the forst record int the list");
+                    Console.WriteLine("4. Display the first record int the list");
                     Console.WriteLine("5. Exit");
                     Console.WriteLine("\nEnter your choice (1-4) ");
                     char ch = Convert.ToChar(Console.ReadLine());
